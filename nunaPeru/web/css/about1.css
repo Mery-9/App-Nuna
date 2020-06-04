@@ -1,0 +1,99 @@
+
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    line-height:1.55;
+    text-align:left;
+}
+img {
+    border:0;
+    outline:none;
+}
+a:hover, a:active { text-decoration:none; }
+:focus { outline:0; }
+.page ul, .page ol {
+    margin:0;
+    padding:0;
+}
+ul, ol { list-style:none outside none; }
+ul { padding:0; }
+
+p { line-height:24px; }
+
+
+.footer-wrapper {
+    border-top:solid 1px #13a4d4;
+    margin-top:40px;
+}
+
+
+
+.footer-wrapper #back-top a:hover .sticker-wrapper {
+    right:0px;
+    top:0px;
+}
+.footer-wrapper #back-top a:hover .sticker-wrapper .sticker {
+    height:40px;
+    width:40px;
+}
+
+
+.footer-wrapper .footer-copyright {
+    background:#13a4d4;
+    padding:10px 0;
+    color:#acacac;
+    height:100px;
+    overflow:hidden;
+}
+
+
+.footer-top .list-footer .newslettter { border-bottom:1px solid #13a4d4; }
+.footer-top .list-footer .newslettter .block-subscribe { padding:0 0 50px 50px; }
+.footer-top .list-footer form { max-width:775px; }
+.footer-top .list-footer .footer-links { margin:0 0 0 25px; }
+.footer-top .list-footer .footer-links .info-footer h3 {
+    margin-top:43px;
+    margin-bottom:33px;
+    font-size:18px;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    font-weight:400;
+}
+.footer-top .list-footer .footer-links .info-footer .footer-list { margin:0; }
+.footer-top .list-footer .footer-links .info-footer .footer-list li { position:relative; }
+.footer-top .list-footer .footer-links .info-footer .footer-list li a {
+    line-height:25px;
+    padding-left:15px;
+    letter-spacing:0.01em;
+}
+.footer-top .list-footer .footer-links .info-footer .footer-list li a:before {
+    content:"\f096";
+    font-family:FontAwesome;
+    position:absolute;
+    left:0;
+    display:block;
+    font-size:9px;
+    line-height:25px;
+    bottom:0;
+}
+.footer-top .list-footer .footer-links .info-footer .footer-list li a:hover:before { content:"\f0c8"; }
+.footer-top .about-social { padding:60px 15px; }
+.footer-top .about-social .about img { margin-bottom:36px; }
+.footer-top .about-social .about .about-text {
+   margin-bottom:57px;
+    letter-spacing:0.01em;
+    text-align:justify;
+} 
+
+
+
+
+
+
+
+
+
+
+

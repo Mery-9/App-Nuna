@@ -1,0 +1,19 @@
+body {
+  color:#696969;
+  font-size:12px;
+}
+a { color:#696969; }
+a:focus { color:#696969; }
+a, .dropdown .text { color:#696969; }
+
+body { font-family:Montserrat, arial, serif; }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family:Montserrat, arial, serif; }
+.footer-wrapper { background-color:#f8f8f8; }
+.footer-wrapper button.button {
+  background-color:#1e1e1e;
+  color:#ffffff;
+}
+.footer-wrapper button.button:hover {
+  background-color:#ffffff;
+  color:#1e1e1e;
+}

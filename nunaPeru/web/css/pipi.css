@@ -1,0 +1,97 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+
+
+
+.alignleft{float:left; margin:0 20px 20px 0;}
+.alignright{float:right; margin:0 0 20px 20px;}
+.left{float:left !important;}
+.right{float:right !important;}
+.line{border-bottom:1px solid #939598; clear:both;}
+form{margin:0;}
+input{
+  font-family:'Open Sans', sans-serif;
+}
+
+
+/* section
+================================================== */
+div.a{
+  clear: both;
+  width: 100%;
+}
+div.a .line {
+  border-bottom: 4px solid #13a4d4;
+  padding: 10px 0;
+}
+div.a .gris {
+  background: none repeat scroll 0 0 #F1F2F2;
+  clear: both;
+  display: table;
+  padding: 20px 0;
+}
+
+
+
+div.a h1 {
+  border-bottom: 4px solid #13a4d4;
+  color: #13a4d4;
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 20px;
+  padding: 10px 20px 5px;
+  position: relative;
+  text-decoration: none;
+}
+
+div.a .interna {
+  clear: both;
+  color: #58595B;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 40px 0;
+}
+div.a .interna.single {
+  background: none repeat scroll 0 0 #FFFFFF;
+  
+}
+
+div.a h3 {
+  color: #58595B;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: normal;
+}
+div.a h4 {
+  color: #58595B;
+  font-family: Lato;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 20px;
+  margin-top: -10px;
+}
+
+
+
+
+
+.subtitulo h3 {
+  color: #414042;
+  font-family: Asap;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: normal;
+}
+
+	@media only screen and (min-width: 960px) {
+
+		section .interna.single {
+		  padding: 40px 90px 70px;
+		}
+
+		
+	}

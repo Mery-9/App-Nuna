@@ -1,0 +1,35 @@
+/*inicio*/
+/*footer metodos de pago*/
+
+
+
+.footer-wrapper .footer-copyright{
+    background-color:#13a4d4;
+}
+
+
+
+img.alinear{
+    margin-top:50px;
+}
+
+
+.footer-wrapper .title-footer, .footer-wrapper .block-title, .footer-wrapper h2, .footer-wrapper h3 {
+    color: #13a4d4;
+    letter-spacing:-1px;
+    font-weight:400}
+
+.footer-top .list-footer .footer-links .info-footer h3 {
+    margin-top: 43px;
+    margin-bottom: 33px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+}
+
+
+
+
+
+

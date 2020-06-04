@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f99ddbf3-f73b-4a16-b38e-080709e7bbe4">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="idhistoria" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="idmas" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     historiamedica.`id_historia`,
+     historiamedica.`nom_mascota`,
+     historiamedica.`nom_doctor`,
+     historiamedica.`ape_doctor`,
+     historiamedica.`edad`,
+     historiamedica.`raza`,
+     historiamedica.`sexo`,
+     historiamedica.`peso`,
+     historiamedica.`fecha_nacimiento`,
+     historiamedica.`nom_tiempo`,
+     historiamedica.`fecha_consulta`,
+     historiamedica.`hora_consulta`,
+     historiamedica.`motivos_consulta`,
+     historiamedica.`diagnostico_consulta`,
+     historiamedica.`nom_veterinaria` AS historiamedica_nom_veterinaria
+FROM
+     `historiamedica` historiamedica
+WHERE
+     id_historia = $P{idhistoria}]]>
+	</queryString>
+	<field name="id_historia" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nom_mascota" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nom_doctor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ape_doctor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="edad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="raza" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="peso" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha_nacimiento" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nom_tiempo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha_consulta" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hora_consulta" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="motivos_consulta" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="diagnostico_consulta" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="historiamedica_nom_veterinaria" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="96">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="a7ba5946-a58e-4967-8843-529f3f39d4f4"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="b958f67b-d8a0-4f25-9536-ad74655e9bbd"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Historia Medica de ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="23" y="63" width="137" height="29" forecolor="#FFFFFF" uuid="f147a139-212a-4579-9302-082f4dfc24dd"/>
+					<textElement>
+						<font size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[UywaDoc SAC.]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement mode="Transparent" x="242" y="20" width="216" height="43" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="c2761181-7654-4a88-8db2-bf5134eed852"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="SansSerif" size="24" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nom_mascota}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement mode="Transparent" x="350" y="43" width="225" height="49" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="9d3a365c-a034-4b46-b0bf-7f1714272fdc"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="SansSerif" size="24" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{historiamedica_nom_veterinaria}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band/>
+	</pageHeader>
+	<columnHeader>
+		<band height="52">
+			<staticText>
+				<reportElement mode="Opaque" x="3" y="-12" width="165" height="33" forecolor="#000000" backcolor="#006699" uuid="93e5b0f2-d6f5-4719-8bee-1236900784b9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Nombre de Mascota]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="3" y="21" width="165" height="31" uuid="f0d5dc27-76ac-4ee1-9086-5a78046acceb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nom_mascota}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="597">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="230" width="268" height="20" uuid="375a0194-6bb0-4588-862c-3070d317e475"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nom_doctor}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="268" y="230" width="287" height="20" uuid="91f36424-95b5-4c3b-a871-48254e64130d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ape_doctor}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="140" width="56" height="42" uuid="50125690-aa75-4b84-964b-5c6aac63b7f6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{edad}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="293" y="140" width="97" height="42" uuid="a86f3c55-0f06-4911-b03f-b12cd931ff9a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{raza}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="140" y="140" width="82" height="42" uuid="c7592c74-06ec-4af4-a284-4d22905d50fb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sexo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="222" y="140" width="71" height="42" uuid="25138060-67af-4fb4-ae9b-e41a2d36cd45"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{peso}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="390" y="140" width="165" height="42" uuid="3195b8c0-60e1-4713-9dec-158b95a3f66a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha_nacimiento}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="59" y="140" width="81" height="42" uuid="d1298ef4-d83d-44fc-9940-843c798433d6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nom_tiempo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="342" width="555" height="59" uuid="4c755345-c33d-45f2-b30d-2fa06bcaaef3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{motivos_consulta}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="458" width="555" height="85" uuid="8304f6f4-6a92-4bec-a24e-d4311cd097d2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{diagnostico_consulta}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="210" width="268" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="33a066df-f553-458c-bcc0-6a01fc28faa3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre de Doctor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="268" y="210" width="287" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="8a198bde-f4c0-4223-b5d1-fc8153efbd3e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellido de Doctor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="120" width="140" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="4b8d309d-80e9-4f82-9410-884ef5e4ad0c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Edad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="293" y="120" width="97" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f411e860-bd91-4a7f-a4b0-058d341b8a50"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Raza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="140" y="120" width="82" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="761afcae-e76f-4a5d-98de-6504a71f1383"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Genero]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="222" y="120" width="71" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="31847e4b-4481-47dc-a73b-f1ece7438b98"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Peso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="390" y="120" width="165" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="49fb64a7-eabd-4966-80fc-63e17caa71dc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de Nacimiento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="305" width="555" height="37" forecolor="#006699" backcolor="#E6E6E6" uuid="55ea7272-c3b7-4cc5-b374-fa385674ef10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sintomas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="408" width="555" height="50" forecolor="#006699" backcolor="#E6E6E6" uuid="d7574fa5-fb40-4b32-83a3-2388287f08b5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Diagnostico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="91" width="555" height="29" forecolor="#000000" backcolor="#006699" uuid="baf33948-9dd8-49a3-b55d-cda19666e63f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Informacion de Mascota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="185" y="33" width="185" height="28" forecolor="#006699" backcolor="#E6E6E6" uuid="5a5aca21-bd5c-4c2d-930d-ea56d384998b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de consulta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="370" y="33" width="185" height="28" forecolor="#006699" backcolor="#E6E6E6" uuid="4c801821-7923-4320-a01f-b3005e9701c9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[hora de consulta]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="185" y="61" width="195" height="30" uuid="5a39518f-e78a-4f17-a40d-9a2b3e219d11"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha_consulta}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="380" y="61" width="175" height="30" uuid="0aacf07f-be2a-4c4a-9430-7d9d51cb9da8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hora_consulta}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="33" width="185" height="28" forecolor="#006699" backcolor="#E6E6E6" uuid="8072dd41-bcad-4554-a678-287169a9eecc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nro. Historia]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="3" y="61" width="182" height="30" uuid="beea9648-566f-49f7-b38a-beb539eb06ed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_historia}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="182" width="555" height="28" forecolor="#000000" backcolor="#006699" uuid="61aa7599-b94c-4b8d-847c-a414c7298592"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Datos de Doctor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="9" width="555" height="24" forecolor="#000000" backcolor="#006699" uuid="391734ea-2b67-4c34-a7f3-aca3a4cbe314"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Datos Generales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="281" width="555" height="24" forecolor="#000000" backcolor="#006699" uuid="afafea29-fd03-4b9c-bc23-4a773c597234"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Detalle de Consulta]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="20">
+			<textField>
+				<reportElement mode="Opaque" x="3" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="c4a3ffbd-342b-4197-a620-f642b4ee9b66"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="4f7b83bb-66c6-4e23-9081-3a6e436cf34a"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="4c63edb0-82b8-4241-ae4b-641ece26bc49"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

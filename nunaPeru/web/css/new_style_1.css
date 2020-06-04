@@ -1,0 +1,117 @@
+*{
+    font-family: "Open Sans", Sans-Serif;
+}
+
+#myTopnav {
+    padding: 0 50px;
+    height: 70px;
+    background-color: transparent;
+}
+#myTopnav a{
+    padding: 0 16px;
+    height: 70px;
+    line-height: 70px;
+}
+#myTopnav a img{
+    margin-top: 10px;
+    height: 60px;
+    opacity: 0.9;
+}
+#myTopnav .dropbtn{
+    padding-top:0;
+    padding-bottom: 0;
+    height: 70px;
+    line-height: 70px;
+}
+.main-bg{
+    padding: 60px 10px 100px;
+}
+.login-sec{
+    padding: 40px 10px;
+}
+@media screen and (min-width: 768px){
+    .login-sec{
+        padding: 80px 20px;
+    }
+    .main-bg{
+        padding: 60px 50px 100px;
+    }
+}
+.login-sec h2{
+     font-family: "Poppins", Sans-Serif;
+     font-weight: 800;
+     color: #13a3d5 !important;
+ }
+.login-sec h2:after{
+    display: none;
+}
+.login-sec label{
+    color: #777777;
+    font-weight: 600;
+    font-size: 14px;
+}
+.login-sec .form-control, .login-sec small{
+    font-size: 14px;
+}
+.login-sec button, .login-sec .btn{
+    background: #13a3d5 !important;
+}
+.login-sec .btn{
+    border-radius: 4px;
+    border: 0;
+    height: 36px;
+}
+.login-sec .login-form{
+    max-width: 280px;
+    margin: auto;
+}
+.banner-sec{
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    background: #F1F3F2;
+}
+.banner-sec .carousel{
+    max-width: 90%;
+    margin: 30px auto 0;
+}
+.banner-sec .carousel .active{
+    background: transparent;
+}
+.banner-sec .carousel-indicators{
+    bottom: -45px;
+}
+.banner-sec .carousel-indicators li{
+    background: #13a3d5;
+}
+.banner-sec .carousel-indicators li.active{
+    background: #004ba0;
+}
+footer{
+    background: #EEEEEF;
+}
+footer .nav-footer a{
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: 600;
+    color: #13a3d5 !important;
+}
+.login-sec .active{
+    background: #13a3d5;
+    color: white !important;
+}
+.login-sec .nav-item.active a{
+    color: white !important;
+    background: #13a3d5;
+}
+.login-sec .tab-pane{
+    padding-top: 20px;
+}
+.login-sec .tab-pane.active{
+    background: white;
+}
+.login-sec .nav{
+    width: 100%;
+    max-width: 260px;
+    margin: auto;
+}

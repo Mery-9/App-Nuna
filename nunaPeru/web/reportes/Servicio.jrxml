@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7bef8e86-1ad3-43df-9b13-4957227923ed">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="fech1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fech2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id_veterinaria" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="idvet" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT nom_usuario,nom_mascota, fech_servicio,nom_talla, nom_tiposervicio, nom_veterinaria
+FROM servicios
+WHERE fech_servicio BETWEEN $P{fech1} and $P{fech2} AND id_veterinaria =$P{idvet};]]>
+	</queryString>
+	<field name="nom_usuario" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nom_mascota" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fech_servicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nom_talla" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nom_tiposervicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nom_veterinaria" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<sortField name="fech_servicio"/>
+	<sortField name="nom_tiposervicio"/>
+	<group name="fech_servicio">
+		<groupExpression><![CDATA[$F{fech_servicio}]]></groupExpression>
+		<groupHeader>
+			<band height="47">
+				<textField>
+					<reportElement style="SubTitle" x="47" y="13" width="506" height="24" forecolor="#990099" uuid="55f346e8-9436-458c-a92b-b7134ff321c4"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fech_servicio}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement mode="Opaque" x="0" y="13" width="36" height="24" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="d40d4c68-c1b4-4341-8bed-cba8c67780be"/>
+				</rectangle>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="43">
+				<textField pattern="" isBlankWhenNull="false">
+					<reportElement style="Detail" mode="Transparent" x="502" y="0" width="38" height="25" forecolor="#990099" backcolor="#FFFFFF" uuid="ed9e68ca-2c65-49d7-9a3a-e47da0d1812d"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{fech_servicio_COUNT}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Column header" mode="Transparent" x="290" y="0" width="178" height="18" forecolor="#990099" backcolor="#FFFFFF" uuid="eee4b38f-dde4-4b41-9445-de376aa716aa"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<text><![CDATA[Total de reservas por fecha: ]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="ea152b66-cc2f-432b-9d54-d185f1c17099"/>
+				<imageExpression><![CDATA["leaf_banner_violet.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="433" height="33" uuid="235b3496-420b-4f23-b9bd-7df528be56ed"/>
+				<textElement verticalAlignment="Middle">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Lista de Servicios]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="Detail" mode="Transparent" x="218" y="9" width="188" height="39" forecolor="#000000" backcolor="#FFFFFF" uuid="4fc24e61-de86-4656-90ef-b50e2835a68a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Calibri" size="24" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nom_veterinaria}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="SubTitle" x="19" y="48" width="75" height="22" uuid="a32c5fa3-9558-462a-8571-3ed68236d68b"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[UywaDoc]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="e7a1bb94-fd98-485c-a119-3164898fe2ac"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="120" height="15" uuid="365bb2cc-44b8-4a7e-8b51-a39d07eae6f5"/>
+				<text><![CDATA[Nombre de Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="406" y="19" width="148" height="15" uuid="adad60f6-b4e5-45fd-a079-1af10be75171"/>
+				<text><![CDATA[Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="120" y="19" width="125" height="15" uuid="d578ad33-04b6-4373-9bf9-c1660f4d0de4"/>
+				<text><![CDATA[Nombre de Mascota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="263" y="19" width="123" height="15" uuid="d4362a99-ca8e-4722-838a-4c1a30eed758"/>
+				<text><![CDATA[Medida de Mascota]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="ccc94c43-d162-4c8f-aaf7-b88115ad6fd3"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="109" height="15" uuid="2642cb68-265c-432b-933b-df2450cb7272"/>
+				<textFieldExpression><![CDATA[$F{nom_usuario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="406" y="0" width="148" height="15" uuid="5e7cce1c-954a-4d3d-931b-ffd033238e72"/>
+				<textFieldExpression><![CDATA[$F{nom_tiposervicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="120" y="0" width="109" height="15" uuid="536061af-d4da-4708-90a1-20f30dd11e3f"/>
+				<textFieldExpression><![CDATA[$F{nom_mascota}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="263" y="0" width="109" height="15" uuid="694b4513-7e9d-47e2-b115-6ff4278c96b0"/>
+				<textFieldExpression><![CDATA[$F{nom_talla}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="cdaaafc0-4d58-417f-ad2c-0014020db634"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" mode="Transparent" x="168" y="20" width="122" height="25" forecolor="#990099" backcolor="#FFFFFF" uuid="24e667bc-b201-49b0-8987-039443c05d0d"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="Arial" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Total de registros  ]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement style="Detail" mode="Transparent" x="301" y="20" width="58" height="25" forecolor="#990099" backcolor="#FFFFFF" uuid="9f207e64-696d-4915-b552-102dabab573a"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="Arial" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="947dc655-c0a9-43a0-b3c8-3df4940ac895"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="bd426d79-5d64-4b37-9ee5-0ef40f82e2f0"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="5f2e2510-94e9-4396-9f59-01db93a1e936"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
