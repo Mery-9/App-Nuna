@@ -487,7 +487,7 @@ function myFunction() {
 </div>
 <div class="topnav" id="myTopnav">
     <div class="container">
-        <a href="Inicio.jsp"><img src="img/UYWADOG_HEADER.png"></a>
+        <a href="inicio.jsp"><img src="img/nuna.png"></a>
         <div class="right">
             <a href="quienessomos.jsp">Nosotros</a>
             <a href="contactanos.jsp">Contáctanos</a>
@@ -609,7 +609,7 @@ function myFunction() {
                 <br>            <br><br>
                 <br>
                 <br><br>
-                <img class="d-block img-fluid" src="img/UYWADOG.png"
+                <img class="d-block img-fluid" src="img/nuna.png"
                      style="width: 350px; text-align: center; margin:0 auto;">
                 <br>
 
